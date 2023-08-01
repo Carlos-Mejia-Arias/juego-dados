@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			.dados {
+				width: 150px;
+				height: 150px;
+				margin-bottom: 50px;
+				margin-left: 200px;
+				margin-top: 25px;
+			}
+			.boton {
+				margin-left: 200px;
+				padding: 25px;
+				background-color: rgb(47, 118, 241);
+				color: #fff;
+			}
+		</style>
+
+		<script>
+			//Math.ceil devuelve un valor entero mayor o igual mas proximo a un numero dado.
+
+			function aleatorio() {
+				let numeroAleatorio = Math.ceil(Math.random() * 6);
+				return numeroAleatorio;
+			}
+
+			function play() {
+				let numero = aleatorio();
+				document.images[0].src = `./imagen/dado${numero}.png`;
+			}
+		</script>
+	</head>
+	<body>
+		<img src="./imagen/dado1.png" alt="" class="dados" />
+		<br />
+		<button class="boton" onclick="play()">Jugar</button>
+	</body>
+</html>
